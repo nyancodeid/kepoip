@@ -1,0 +1,39 @@
+{
+  "name": "kepoip",
+  "version": "1.0.0",
+  "description": "KepoIP - a boring App to find Location Detail of an IP address",
+  "main": "index.js",
+  "author": "Ryan Aunur Rassyid",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "build:gh": "parcel build src/index.html --no-source-maps --public-url /sandie/",
+    "push:gh": "git subtree push --prefix dist origin gh-pages"
+  },
+  "dependencies": {
+    "is-ip": "^3.1.0",
+    "leaflet": "^1.6.0",
+    "linkstate": "^1.1.1",
+    "preact": "^10.1.1",
+    "preact-compat": "^3.19.0",
+    "preact-router": "^3.1.0",
+    "react": "^15.6.1 || ^16.0.0",
+    "react-dom": "^16.12.0",
+    "react-leaflet": "^2.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-purifycss": "^1.0.5",
+    "sass": "^1.23.7"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
+  }
+}
