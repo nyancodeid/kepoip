@@ -109,7 +109,7 @@ body {
 }
 
 .copyright {
-  position: absolute;
+  position: fixed;
   padding: 4px 8px;
   border-radius: 4px;
 
@@ -118,6 +118,8 @@ body {
 
   color: white;
   background-color: #212121;
+  display: block;
+  z-index: 1000;
 }
 
 @media only screen and (max-width: 768px) {
