@@ -5,6 +5,10 @@ import linkState from 'linkstate'
 import isIp from 'is-ip'
 import Header from '../Header'
 
+
+const isProd = (process.env.NODE_ENV === 'production')
+const baseName = process.env.BASENAME
+
 export default class Lookup extends Component {
   state = {
     ip: '',
@@ -22,12 +26,12 @@ export default class Lookup extends Component {
       this.setState({ error: true })
     } else {
       this.setState({ error: false })
-      route(`/lookup/${btoa(this.state.ip)}`)
+      route(`/${isProd ? `${baseName}/` : ''}lookup/${btoa(this.state.ip)}`)
     }
   }
 
   onSubmitMe = () => {
-    route('/lookup/me')
+    route(`/${isProd ? `${baseName}/` : ''}lookup/me`)
   }
 
   render (_, { ip, error }) {

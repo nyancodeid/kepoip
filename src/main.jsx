@@ -8,10 +8,13 @@ import Result from './components/Result/Result'
 import './bootstrap.min.css'
 import './style.scss'
 
+const isProd = (process.env.NODE_ENV === 'production')
+const baseName = process.env.BASENAME
+
 const App = () => (
 	<Router>
-    <Lookup path="/" />
-    <Result path="/lookup/:ip" />
+    <Lookup path={`/${isProd ? baseName : '/' }`} />
+    <Result path={`/${isProd ? baseName : '/' }/lookup/:ip`} />
   </Router>
 );
 
