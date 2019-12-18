@@ -26,12 +26,12 @@ export default class Lookup extends Component {
       this.setState({ error: true })
     } else {
       this.setState({ error: false })
-      route(`/${isProd ? `${baseName}/` : ''}lookup/${btoa(this.state.ip)}`)
+      route(`${isProd ? `${baseName}/` : ''}lookup/${btoa(this.state.ip)}`)
     }
   }
 
   onSubmitMe = () => {
-    route(`/${isProd ? `${baseName}/` : ''}lookup/me`)
+    route(`${isProd ? `${baseName}/` : ''}lookup/me`)
   }
 
   render (_, { ip, error }) {
