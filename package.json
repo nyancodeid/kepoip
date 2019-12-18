@@ -8,7 +8,7 @@
   "scripts": {
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
-    "build:gh": "parcel build src/index.html --no-source-maps --public-url /sandie/",
+    "build:gh": "parcel build src/index.html --no-source-maps --public-url /kepoip/",
     "push:gh": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
@@ -29,7 +29,6 @@
     "@babel/preset-react": "^7.7.4",
     "babel-plugin-module-resolver": "^4.0.0",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-purifycss": "^1.0.5",
     "sass": "^1.23.7"
   },
   "alias": {

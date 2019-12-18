@@ -23,7 +23,7 @@ npm run start
 
 ## Screenshot
 <p align="center">
-  <img alt="KepoIP" width="80%" src="screenshot.png" />
+  <img alt="KepoIP" src="screenshot.png" />
 </p>
 
 API Service by 
